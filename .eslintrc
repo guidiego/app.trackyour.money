@@ -1,0 +1,21 @@
+{
+    "root": true,
+    "env": {
+      "jest": true
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": ["@typescript-eslint", "prettier", "testcafe"],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier",
+      "prettier/react",
+      "plugin:testcafe/recommended"
+    ],
+    "rules": {
+      "prettier/prettier": "error",
+      "indent": 0,
+      "comma-dangle": ["error", "always-multiline"]
+    }
+  }

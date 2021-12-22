@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Deeps
+        run: yarn install
+
+      - name: Linting
+        run: yarn lint
+
+      - name: Check Type
+        run: yarn tsc --noEmit
+
+      - name: Test & Coverage
+        run: yarn jest --config jest.config.json --coverage

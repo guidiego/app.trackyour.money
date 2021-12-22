@@ -1,0 +1,10 @@
+{
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": ["./jest.setup.js"],
+  "coverageReporters": ["json", "lcov", "text", "html"],
+  "collectCoverageFrom": ["src/**/*.{ts,tsx}", "!src/**/*.stories.{ts,tsx}"],
+  "moduleNameMapper": {
+    "^~(.*)$": ["<rootDir>/src$1"],
+    "^.+\\.(css|less)$": ["identity-obj-proxy"]
+  }
+}
